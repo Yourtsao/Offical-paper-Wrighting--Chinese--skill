@@ -56,9 +56,7 @@ gongwen-xiezuo-skill/
 ## 💰 支持这个项目
 
 如果这个技能包帮你省了时间、过了关、涨了工资：
-
-- **GitHub Sponsors**：[点这里赞助](https://github.com/sponsors/Yourtsao)（需我先开通 Sponsors 才生效）
-- **爱发电**：[afdian.com/a/yourtsao](https://afdian.com/a/yourtsao)（占位，待开通）
+- **爱发电**：[afdian.com/a/yourtsao](https://afdian.com/a/yourtsao)
 - **请我喝杯茶**：微信 / 支付宝赞赏码
 - 💬 **联系方式**：QQ 804652586 | 邮箱 804652586@qq.com
 - 🛠 **定制服务**：需要单位专属模板、AI 公文工作流搭建、批量材料代写 → 在 [Issues](https://github.com/Yourtsao/gongwen-xiezuo-skill/issues) 里找我，按需报价
