@@ -53,16 +53,15 @@ gongwen-xiezuo-skill/
 - 每类精选 2 篇代表作的逻辑：结构最典型 + 写法最讲究，避免同类资料堆积
 - 内置写作铁律：文种用语精确（议案用"推荐/免去"、决议用"同意/选举/免去"）、层级标题不加粗、黑体标题首行缩进、段落间不空行
 
-## 支持这个项目 ☕
+## 💰 支持这个项目
 
 如果这个技能包帮你省了时间、过了关、涨了工资：
 
 - **GitHub Sponsors**：[点这里赞助](https://github.com/sponsors/Yourtsao)（需我先开通 Sponsors 才生效）
 - **爱发电**：[afdian.com/a/yourtsao](https://afdian.com/a/yourtsao)（占位，待开通）
-- **请我喝杯茶**：微信 / 支付宝赞赏码（插入位置）
-- 💰 **定制服务**：需要单位专属模板、AI 公文工作流搭建、批量材料代写 → 在 [Issues](https://github.com/Yourtsao/gongwen-xiezuo-skill/issues) 里找我，按需报价
-
-每一笔赞助都是继续更新（更多文种、更细的模板、更实用的金句库）的动力。
+- **请我喝杯茶**：微信 / 支付宝赞赏码
+- 💬 **联系方式**：QQ 804652586 | 邮箱 804652586@qq.com
+- 🛠 **定制服务**：需要单位专属模板、AI 公文工作流搭建、批量材料代写 → 在 [Issues](https://github.com/Yourtsao/gongwen-xiezuo-skill/issues) 里找我，按需报价
 
 ## License
 
