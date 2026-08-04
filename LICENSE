@@ -1,21 +1,40 @@
-MIT License
+# 教学用途许可协议
+## Educational Use License
 
-Copyright (c) 2026  (Yourtsao)
+版权所有 © 2026 曹育维 (Yourtsao)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+本软件及相关文档（以下简称"本作品"）的知识产权归作者**曹育维**所有，受《中华人民共和国著作权法》及相关法律法规保护。
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+---
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+### 授权范围
+
+在遵守本协议全部条款的前提下，作者免费授予您以下权利：
+
+1. **个人学习与研究**：下载、复制、修改本作品，用于个人学习、学术研究及教学演示目的；
+2. **非商业教学**：在教育机构（含高校、培训机构内部教学场景）中作为教学素材使用，但不得单独出售或打包转售本作品；
+3. **署名传播**：在保留本许可协议及版权声明的前提下，以非商业方式分享本作品。
+
+### 禁止事项
+
+未经作者事先书面授权，**严格禁止**以下行为：
+
+- 将本作品或其衍生作品用于任何**商业买卖、转售、捆绑销售、订阅收费**等营利活动；
+- 将本作品整体或部分作为**商业培训课程、付费知识产品、SaaS 服务**的内容进行分发或再授权；
+- 删除或修改本作品中的版权声明、许可协议及作者署名信息；
+- 以作者名义进行任何形式的担保、背书或虚假关联。
+
+### 免责声明
+
+1. 本作品按**"现状"（AS IS）**提供，作者不提供任何明示或默示的担保，包括但不限于适销性、特定用途适用性及不侵权的担保。
+2. 在任何情况下，作者均不对因使用或无法使用本作品而产生的任何直接、间接、附带、特殊或后果性损害承担责任，无论该等损害是否可预见，无论基于合同、侵权或其他法律理论。
+3. 任何超出本协议授权范围的使用行为，其法律责任及后果**完全由使用者自行承担**，作者概不负责亦不承担任何连带责任。
+
+### 其他
+
+- 如需将本作品用于商业用途，请与作者联系获取商业授权。
+- 本协议的解释、效力及争议解决适用中华人民共和国法律。
+
+---
+
+*本作品是作者独立智力成果，保留一切未明确授予的权利。*
