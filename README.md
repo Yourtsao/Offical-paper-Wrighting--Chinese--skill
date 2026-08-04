@@ -63,4 +63,4 @@ gongwen-xiezuo-skill/
 
 ## License
 
-MIT — 随便用，标注出处即可。
+MIT License — 详见 [LICENSE](LICENSE) 文件
