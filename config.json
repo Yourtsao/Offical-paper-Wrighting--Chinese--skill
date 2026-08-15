@@ -1,0 +1,5 @@
+{
+  "GATEWAY_URL": "https://gongwen-api.xyz",
+  "GATEWAY_SECRET": "<your-gateway-secret>",
+  "EMAIL": null
+}
