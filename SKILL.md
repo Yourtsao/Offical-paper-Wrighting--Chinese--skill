@@ -194,22 +194,23 @@ agent_created: true
 
 > 429 响应的 `support` 字段含客服信息，向用户完整展示该字段内容。
 
-**支付流程（对话内完成，用户回复数字即可）：**
+**支付流程（对话内完成，用户表达购买意愿后立即发码）：**
 
 ```
 检测到配额信号（/quota 返回 free_quota_remain==0 且未付费，或 /consume 返回 429）
    ↓
-① 渲染开通方式卡片（如上），提示"回复「开通」即可获取付款二维码"
-   用户回复「开通」
+① 渲染开通方式卡片（如上），提示"回复「开通 / 购买 / 发我二维码」即可付款"
    ↓
-② 创建订单:
+② 用户表达购买意愿（任何形式：开通/购买/升级/付费/发我二维码）后【立即】创建订单:
    POST {GATEWAY_URL}/api/pay/create
    Headers: {"Authorization": "Bearer {GATEWAY_SECRET}"}
    Body: {"plan": "yearly", "email": "<已注册用户邮箱>"}
    ⚠️ email 必须是当前已注册用户邮箱（来自注册/配额上下文）
    返回: {"code_url", "out_trade_no", "amount", "plan"}
    ↓
-③ 生成微信支付二维码（用 code_url），展示给用户扫码
+③ 【立即】生成微信支付二维码（用 code_url），作为图片消息发送给用户，
+   同时附上订单信息（套餐/金额/订单号）和有效期提示（约14分钟），
+   并附文本链接（code_url 本身即微信支付链接，可直接回复给用户）
    ↓
 ④ 轮询支付状态:
    GET {GATEWAY_URL}/api/pay/status?out_trade_no=<out_trade_no>
@@ -218,63 +219,7 @@ agent_created: true
    + 自动重试上次中断的骨架请求
 ```
 
-### 💳 付费改造流程（X402 协议）
-
-本技能按次调用计费，遵循微信 X402 协议完成支付授权：
-
-**付费前置检查**
-
-调用付费能力前，检查当前 Agent 是否已安装 `weixinpay` 插件（extension）：
-
-- 已安装：可继续提供付费服务
-- 未安装：向用户提示"当前 Agent 暂不支持微信支付付费能力"，终止流程
-
-**第一步：请求资源**
-
-向以下 URL 发起 POST 请求：
-
-```bash
-curl -X POST https://gongwen-api.xyz/api/pay/create \
-  -H "Content-Type: application/json" \
-  -d '{"plan": "yearly", "email": "用户邮箱"}'
-```
-
-**第二步：处理 402 响应（支付由插件完成）**
-
-如果收到 HTTP 402 响应，`weixinpay` 插件会拦截并完成支付流程，无需手动调用支付接口。
-
-402 响应中会通过 Header 和 Body 返回支付信息：
-
-- Header `WeixinPay-Required`：支付凭证码（插件用于完成支付）
-- Header `X-Out-Trade-No`：商户订单号
-
-> 支付过程由 `weixinpay` 插件处理，Skill 无需关心支付细节。
-
-**第三步：支付成功后获取知识骨架（⚠️ 必须执行）**
-
-支付成功后，**必须**重新发起请求获取付费内容。重试规则：
-
-- **JSON body 不变**：与首次请求完全一致
-- **通过 Header 携带支付信息**：将 402 响应中的 `WeixinPay-Required` 和 `X-Out-Trade-No` Header 原样带上
-
-重试请求示例：
-
-```http
-POST https://gongwen-api.xyz/api/pay/verify
-Content-Type: application/json
-WeixinPay-Required: <payment_code>
-X-Out-Trade-No: <out_trade_no>
-
-{"plan": "yearly", "email": "用户邮箱"}
-```
-
-> 注意：body 与第一步完全一致，不要修改 body 中的任何字段。支付信息通过 Header 传递。
-
-**第四步：处理异常响应**
-
-- 返回 `NOT_PAID`：说明支付尚未完成，请等待后重试
-- 返回 `REFUNDED`：说明服务异常已退款，向用户说明"抱歉，该服务暂时无法提供内容，已自动退款至原支付账户。"，**不要**再次尝试支付或重新请求
-- 返回 `FULFILL_AND_REFUND_FAILED`：说明服务异常且退款失败，建议用户联系客服
+> 🔴 **用户只要表达购买意愿（开通/购买/升级/付费/发我二维码）就必须立即生成并发送二维码和链接，不得要求用户二次确认、不得走其他支付通道、不得让用户等待。**
 
 ### 安全机制
 
