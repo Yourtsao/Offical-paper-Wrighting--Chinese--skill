@@ -1,42 +1,54 @@
-# 智能公文写作（国企38类文种）· 付费生成版 📝
+# 秘书材料星 · 智能公文写作 Agent Skill 🇨🇳📝
 
-**体制内办公室主任（博士）自学编程，结合十余年经验研发，童叟无欺，用了就知道。**
+**Chinese Official Document Writing Skill — 38 Categories · GB/T 9704 · AI-Powered Gongwen Generator**
 
-**38 类常用公文文种 · 服务端全量知识库 · Agent 生成完整公文**
+A production-grade **Agent Skill** for writing Chinese official documents (公文 / gongwen) used in SOEs, government agencies and party organizations. Built by a former senior office director with a PhD in management — 10+ years of hands-on drafting experience.
 
-## 能力
+**Keywords:** `Chinese official document writing` · `gongwen` · `公文写作` · `国企公文` · `机关公文` · `Agent Skill` · `Claude Code skill` · `GB/T 9704` · `请示` · `报告` · `总结` · `讲话稿` · `会议纪要` · `通知` · `函` · `意见` · `批复` · `述职报告` · `调研报告`
 
-- **38类文种覆盖**：请示、报告、总结、讲话稿、纪要、通知、函、意见、通报、批复、决定、方案、计划、述职、调研、简报、党课、党建等
-- **免费试用**：首次使用邮箱注册，免费赠送 10 次骨架调用（注册后 7 天内有效），体验后可选按次（2元/次）或包年（399元/年）
-- **年费会员**：399 元/年，一年内不限次使用全部文种骨架
-- **防杜撰机制**：缺失信息一律用〔待补：××〕标注，不编造数字、文号、人名
-- **知识库不随包分发**：全量写作知识库存储于服务端，仅用于生成过程
+---
 
-## 快速上手
+## ✨ 能力概览 / Capabilities
 
-1. 在 WorkBuddy 等平台配置此 Skill（导入本包）
-2. 直接说「帮我写一份关于XX的请示 / 报告 / 通知 / 总结…」
-3. 按提示提供邮箱注册 → 免费 2 次体验 → 用完按提示开通年费会员
+| 中文 | English |
+|------|---------|
+| 覆盖 **38 类** 常用公文文种（请示、报告、总结、讲话稿、纪要、通知、函、意见、批复、决定、方案、计划、述职、调研、简报、党课、党建…） | Covers **38 categories** of official documents (requests, reports, summaries, speeches, meeting minutes, notices, letters, opinions, approvals, plans, briefings…) |
+| 服务端 **43.8 万字** 全量写作知识库，实时更新，包内不内置 | Server-side **438K-character** writing knowledge base, always up to date, zero knowledge bundled |
+| 按 GB/T 9704 生成 **Word（docx）** 公文，可直接走 OA | Generates **Word (docx)** documents per GB/T 9704, OA-ready |
+| **防杜撰机制**：缺失数字/文号/人名一律 `〔待补〕` 标注 | **Anti-hallucination**: missing data is always marked `〔待补〕`, never fabricated |
+| 受众画像 + 一键切换行文风格（向上管理） | Audience profiling + one-click style switching |
+| 免费试用：注册送 10 次（7 天内有效） | Free trial: 10 calls on registration (valid 7 days) |
 
-## 包含文件
+## 🚀 快速上手 / Quick Start
 
-| 文件 | 说明 |
-|------|------|
-| `SKILL.md` | 调用流程与配额说明 |
-| `说明.md` | 能力说明与使用指引 |
-| `references/word-export.md` | 公文 Word 版式导出指引（GB/T 9704） |
-| `config.json` | 网关配置（`GATEWAY_SECRET` 需联系作者获取真实密钥） |
+1. **安装 / Install**: 在 Claude Code / WorkBuddy / Dify / 魔搭等平台导入本 Skill（仓库根目录即标准 Agent Skills 包：`SKILL.md` + `references/`）
+   - *Import this repo as an Agent Skill (SKILL.md at repo root + references/)*
+2. **配置 / Configure**: 在 `config.json` 填入有效的 `GATEWAY_SECRET`（联系作者获取）
+   - *Fill a valid `GATEWAY_SECRET` in `config.json` (contact author)*
+3. **使用 / Use**: 直接说「帮我写一份关于XX的请示 / 报告 / 通知 / 总结…」，按引导提供邮箱注册即可
+   - *Just say "write a gongwen request/report/summary about X…" and follow the guided flow*
 
-## 配置
+## 📦 包含文件 / Files
 
-安装后需在 `config.json` 中填入有效的 `GATEWAY_SECRET`（联系作者获取）。
+| 文件 / File | 说明 / Description |
+|-------------|-------------------|
+| `SKILL.md` | Skill 主文件：调用流程与配额说明 / Main skill file: flow & quota |
+| `references/word-export.md` | 公文 Word 版式导出指引（GB/T 9704）/ Word export guide |
+| `config.json` | 网关配置（`GATEWAY_SECRET` 需联系作者）/ Gateway config (secret from author) |
 
-## 联系与定制
+## 💰 付费模式 / Pricing
 
-- 📧 804652586@qq.com
-- ☎️ 17019921000
-- 如需机构 / 企业批量定制、API 接入或私有化部署，请联系我们
+- 免费试用：注册送 **10 次**（7 天有效）/ Free: 10 calls on signup
+- 按次：**2 元/次** / Pay-per-call: ¥2
+- 包年：**399 元/年**，不限次 / Yearly: ¥399, unlimited
+- 机构定制 / API 接入 / 私有化部署：联系作者 / Custom & on-prem: contact author
 
-## 版权声明
+## 📧 联系 / Contact
+
+- 邮箱 / Email: 804652586@qq.com
+- 电话 / Phone: 17019921000
+
+## ⚖️ 版权 / Copyright
 
 本技能包为版权产品，受中国版权保护，未经许可不得复制、转售、抄袭。
+Licensed product. Reproduction, resale or plagiarism prohibited.
