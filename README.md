@@ -1,9 +1,8 @@
 # 秘书材料星 · 智能公文写作 Agent Skill 🇨🇳📝
 
-**Chinese Official Document Writing Skill — 38 Categories · GB/T 9704 · AI-Powered Gongwen Generator**
+**Developed by a senior office director in China's state-owned system with a PhD in management who taught himself coding.** This intelligent gongwen (Chinese official document) writing Skill models the full pipeline of 38 document types, uses template-guided Q&A, a reviewer-profiling mechanism, marks all missing info as `[待补]` — never fabricates — and aligns precisely with **GB/T 9704** via a knowledge base of hundreds of thousands of characters plus 6,500 lines of core code.
 
-A production-grade **Agent Skill** for writing Chinese official documents (公文 / gongwen) used in SOEs, government agencies and party organizations. Built by a former senior office director with a PhD in management — 10+ years of hands-on drafting experience.
-
+Less hair loss, less pointless overtime — documents pass on the first draft, approval rate up to 10x faster. Save time and enjoy life. **Wanna know how Chinese official writing works? Just try!**
 **Keywords:** `Chinese official document writing` · `gongwen` · `公文写作` · `国企公文` · `机关公文` · `Agent Skill` · `Claude Code skill` · `GB/T 9704` · `请示` · `报告` · `总结` · `讲话稿` · `会议纪要` · `通知` · `函` · `意见` · `批复` · `述职报告` · `调研报告`
 
 ---
