@@ -48,7 +48,7 @@ gongwen-dsh/
 ├── cordis.patch.yml        # 插件挂载层
 ├── dsh/index.js            # 插件 Host（系统提示注入 + 注册引导）
 ├── skills/gongwen-writting/
-│   ├── SKILL.md            # 技能本体（0 知识库，v1.0.62）
+│   ├── SKILL.md            # 技能本体（0 知识库，v1.0.64）
 │   └── config.json         # GATEWAY_URL / USER_TOKEN（注册后写入）
 └── scripts/register.mjs    # 注册/验证码/状态查询
 ```
