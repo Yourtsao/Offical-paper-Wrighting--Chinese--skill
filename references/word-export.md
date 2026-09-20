@@ -44,10 +44,13 @@ sec.top_margin, sec.bottom_margin = Cm(3.7), Cm(3.5)
 sec.left_margin, sec.right_margin = Cm(2.8), Cm(2.6)
 
 def set_font(p, name, size, bold=False):
-    p.style.font.name = name
-    p.style.font.size = Pt(size)
-    p.style.font.bold = bold
-    p.style.element.rPr.rFonts.set(qn('w:eastAsia'), name)
+    # 🔴 逐 run 设置字体（2026-09-04 修复：改 p.style 会污染共享样式，
+    #    标题/正文共用样式时后设置的会覆盖先设置的）
+    for run in p.runs:
+        run.font.name = name
+        run.font.size = Pt(size)
+        run.font.bold = bold
+        run._element.rPr.rFonts.set(qn('w:eastAsia'), name)
 
 # 标题
 p = doc.add_paragraph('关于××××的请示')
